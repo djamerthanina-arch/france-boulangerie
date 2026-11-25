@@ -1,0 +1,1424 @@
+/* Couleurs communes à tout le site */
+:root {
+  --bleu: #180f68;
+  --creme: #f9f4e6;
+  --rouge: #d32f2f;
+  --dore: #d8a54b;
+  --blanc: #ffffff;
+}
+
+/* Réinitialisation des marges */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--creme);
+  color: var(--bleu);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* En-tête */
+.bandeau {
+  background-color: var(--bleu);
+  color: var(--blanc);
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 15px 5%;
+  background-color: var(--blanc);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--rouge);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Pied de page bleu */
+.site-footer {
+  background-color: var(--bleu);
+  color: var(--blanc);
+  padding: 30px 5% 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand img {
+  width: 50px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+/* ==================================
+   BANNIÈRE D'ACCUEIL
+================================== */
+
+.hero {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 27, 62, 0.98) 0%,
+      rgba(13, 27, 62, 0.9) 35%,
+      rgba(13, 27, 62, 0.1) 85%
+    ),
+    url("../assets/images/banniere-accueil.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 70px 8%;
+}
+
+.hero-contenu {
+  max-width: 560px;
+}
+
+.hero-surtitre {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--dore);
+}
+
+.hero-description {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.bouton-rouge {
+  display: inline-block;
+  background-color: var(--rouge);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.bouton-rouge:hover {
+  background-color: #a91d27;
+}
+
+/* ==================================
+   CATÉGORIES
+================================== */
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+
+  max-width: 1150px;
+  margin: -35px auto 50px;
+  padding: 25px;
+
+  position: relative;
+  z-index: 1;
+
+  background-color: var(--blanc);
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.categorie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.categorie:hover {
+  transform: translateY(-5px);
+  color: var(--rouge);
+}
+
+.categorie-icone {
+  font-size: 30px;
+}
+
+/* ==================================
+   BOULANGERIES RECOMMANDÉES
+================================== */
+
+.recommandations {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 30px;
+}
+
+.titre-section {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.titre-section h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  color: var(--bleu);
+}
+
+.trait-dore {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--dore);
+  margin: 12px auto;
+  border-radius: 5px;
+}
+
+/* Carrousel */
+
+.carrousel {
+  position: relative;
+}
+
+.liste-boulangeries {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.liste-boulangeries::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carte OpenStreetMap */
+
+#carte {
+  width: 100%;
+  height: 500px;
+  min-height: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e8eadd;
+}
+
+/* Tablette et téléphone */
+
+@media (max-width: 850px) {
+  #carte {
+    height: 350px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #carte {
+    height: 300px;
+  }
+}
+
+.ville {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.avis {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.etoiles {
+  color: #e5a000;
+  font-size: 18px;
+}
+
+/* Flèches */
+
+.fleche {
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: var(--bleu);
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.fleche-gauche {
+  left: -18px;
+}
+
+.fleche-droite {
+  right: -18px;
+}
+
+.fleche:hover {
+  background: var(--rouge);
+  color: white;
+}
+
+/* Tablette */
+
+@media (max-width: 900px) {
+  .carte-boulangerie {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+
+/* Téléphone */
+
+@media (max-width: 600px) {
+  .recommandations {
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .titre-section h2 {
+    font-size: 27px;
+  }
+
+  .carte-boulangerie {
+    flex-basis: 85%;
+  }
+
+  .carte-boulangerie img {
+    height: 180px;
+  }
+}
+
+/* ==================================
+   SECTION GROUPEMENT
+================================== */
+
+.groupement {
+  max-width: 1200px;
+  margin: 50px auto 80px;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+
+  background-color: #fff9ef;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.groupement-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.groupement-image img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.groupement-contenu {
+  position: relative;
+}
+
+.groupement-surtitre {
+  color: var(--rouge);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.groupement-contenu h2 {
+  font-family: Georgia, serif;
+  color: var(--bleu);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.groupement-description {
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.bouton-contour {
+  display: inline-block;
+  padding: 13px 24px;
+  margin-top: 10px;
+
+  border: 2px solid var(--rouge);
+  border-radius: 25px;
+
+  color: var(--rouge);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.bouton-contour:hover {
+  background-color: var(--rouge);
+  color: white;
+}
+
+/* Tablette */
+
+@media (max-width: 900px) {
+  .groupement {
+    gap: 25px;
+    padding: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Téléphone */
+
+@media (max-width: 600px) {
+  .groupement {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 25px;
+    margin: 30px 15px 50px;
+  }
+
+  .groupement-image img {
+    max-width: 280px;
+  }
+
+  .groupement-contenu h2 {
+    font-size: 28px;
+  }
+
+  .groupement-description {
+    font-size: 14px;
+  }
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 420px;
+    padding: 50px 6%;
+    background-position: 60% center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+    margin: -20px 15px 35px;
+    padding: 20px 10px;
+    gap: 25px 10px;
+  }
+
+  .categorie {
+    font-size: 12px;
+  }
+
+  .categorie-icone {
+    font-size: 25px;
+  }
+}
+
+/* Adaptation téléphone */
+@media (max-width: 768px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--rouge);
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu.ouvert {
+    display: flex;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==================================
+   PAGE BOULANGERIES
+================================== */
+
+/* Bannière */
+
+.banniere-carte {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+
+  padding: 60px 8%;
+  color: white;
+
+  background:
+    linear-gradient(90deg, rgba(13, 27, 62, 0.98), rgba(13, 27, 62, 0.65)),
+    url("../assets/images/banniere-carte.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.banniere-carte-contenu {
+  max-width: 650px;
+}
+
+.petit-titre {
+  color: var(--dore);
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.banniere-carte h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 5vw, 55px);
+  margin-bottom: 15px;
+}
+
+.banniere-carte p {
+  line-height: 1.6;
+}
+
+/* Zone principale */
+
+.recherche-boulangeries {
+  max-width: 1250px;
+  margin: 50px auto 80px;
+  padding: 0 25px;
+}
+
+/* Barre de recherche */
+
+.barre-recherche {
+  max-width: 850px;
+  margin: 0 auto 25px;
+}
+
+.barre-recherche label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.champ-recherche {
+  display: flex;
+  padding: 6px;
+  background: white;
+  border: 1px solid #dedede;
+  border-radius: 35px;
+}
+
+.champ-recherche input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.champ-recherche button {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  background: var(--rouge);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Filtres */
+
+.filtres {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.filtre {
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  color: var(--bleu);
+  cursor: pointer;
+}
+
+.filtre.actif,
+.filtre:hover {
+  background: var(--bleu);
+  color: white;
+  border-color: var(--bleu);
+}
+
+/* Liste + carte */
+
+.resultats-carte {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.panneau-resultats,
+.panneau-carte {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  min-width: 0;
+}
+
+.panneau-resultats h3,
+.panneau-carte h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+#nombre-resultats {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#liste-resultats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Cartes de résultats */
+
+.resultat-boulangerie {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.resultat-boulangerie h4 {
+  margin-bottom: 8px;
+  color: var(--bleu);
+}
+
+.resultat-boulangerie p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.resultat-boulangerie button {
+  background: var(--rouge);
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Emplacement de la carte */
+
+#carte {
+  min-height: 460px;
+  background: #e8eadd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .resultats-carte {
+    grid-template-columns: 1fr;
+  }
+
+  .panneau-carte {
+    grid-row: 1;
+  }
+
+  #carte {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banniere-carte {
+    min-height: 250px;
+    padding: 40px 6%;
+  }
+
+  .recherche-boulangeries {
+    padding: 0 15px;
+    margin: 35px auto;
+  }
+
+  .champ-recherche {
+    border-radius: 15px;
+    flex-direction: column;
+  }
+
+  .champ-recherche button {
+    width: 100%;
+  }
+
+  .panneau-resultats,
+  .panneau-carte {
+    padding: 15px;
+  }
+}
+
+/* Amélioration des interactions */
+
+.champ-recherche:focus-within {
+  border-color: var(--bleu);
+  box-shadow: 0 0 0 3px rgba(24, 15, 104, 0.12);
+}
+
+.champ-recherche button:hover {
+  background-color: #a91d27;
+}
+
+.filtre {
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.resultat-boulangerie {
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.resultat-boulangerie:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resultat-boulangerie button {
+  margin-top: 10px;
+  background: var(--rouge);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.resultat-boulangerie button:hover {
+  background: #a91d27;
+}
+
+.resultat-boulangerie button:focus-visible {
+  outline: 3px solid var(--dore);
+  outline-offset: 3px;
+}
+
+/* ==================================
+   FICHES BOULANGERIES MODERNISÉES
+================================== */
+
+.resultat-boulangerie {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 12px;
+  background: white;
+  border: 1px solid #eeeeee;
+  border-radius: 15px;
+
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.resultat-boulangerie:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.resultat-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.resultat-contenu {
+  flex: 1;
+  min-width: 0;
+}
+
+.resultat-contenu h4 {
+  font-size: 16px;
+  color: var(--bleu);
+  margin-bottom: 8px;
+}
+
+.resultat-ville {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.resultat-avis {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.resultat-avis .etoiles {
+  color: #e5a000;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.resultat-contenu button {
+  background: transparent;
+  border: none;
+  color: var(--rouge);
+  padding: 4px 0;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+}
+
+.resultat-contenu button:hover {
+  background: transparent;
+  color: #9e1723;
+  text-decoration: underline;
+}
+
+/* Adaptation téléphone */
+
+@media (max-width: 600px) {
+  .resultat-boulangerie {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .resultat-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .resultat-contenu h4 {
+    font-size: 14px;
+  }
+
+  .resultat-avis .etoiles {
+    font-size: 14px;
+  }
+}
+
+/* ==================================
+   MARQUEURS DE LA CARTE
+================================== */
+
+#carte {
+  position: relative;
+}
+
+#carte {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e8eadd;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+#carte:active {
+  cursor: grabbing;
+}
+
+#tuiles-carte,
+#marqueurs-carte {
+  position: absolute;
+  inset: 0;
+}
+
+#tuiles-carte {
+  pointer-events: none;
+}
+
+.tuile-carte {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  max-width: none;
+  pointer-events: none;
+}
+
+#marqueurs-carte {
+  pointer-events: none;
+}
+
+.marqueur-boulangerie {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 3px solid white;
+  border-radius: 50% 50% 50% 0;
+  background: var(--rouge);
+  transform: translate(-50%, -100%) rotate(-45deg);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.marqueur-boulangerie:hover,
+.marqueur-boulangerie.selectionne {
+  background: var(--bleu);
+  z-index: 5;
+}
+
+.controles-carte {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controles-carte button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: white;
+  color: var(--bleu);
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.controles-carte button:hover {
+  background: #f1eee8;
+}
+
+.attribution-carte {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  padding: 3px 6px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 10px;
+  color: #333;
+}
+
+.attribution-carte a {
+  color: #164b8d;
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  #carte {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  #carte {
+    height: 300px;
+  }
+}
+
+.marqueur-boulangerie:hover {
+  background: #a91d27;
+}
+
+/* =====================================
+   ÉTAPE 11 - FINITIONS RESPONSIVE
+===================================== */
+
+/* Éviter les débordements horizontaux */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Navigation */
+
+.navigation {
+  min-height: 85px;
+}
+
+.menu a {
+  transition: color 0.2s;
+}
+
+.menu a:focus-visible,
+.bouton-rouge:focus-visible,
+.bouton-contour:focus-visible {
+  outline: 3px solid var(--dore);
+  outline-offset: 4px;
+}
+
+/* Cartes du carrousel */
+
+.carte-boulangerie {
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-width: 0;
+  overflow: hidden;
+  background: white;
+  border-radius: 16px;
+  scroll-snap-align: start;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.carte-boulangerie img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* Fiches des résultats */
+
+.resultat-boulangerie {
+  min-width: 0;
+}
+
+.resultat-contenu {
+  min-width: 0;
+}
+
+.resultat-contenu h4 {
+  overflow-wrap: anywhere;
+}
+
+/* =====================================
+   TABLETTE
+===================================== */
+
+@media (max-width: 900px) {
+  .navigation {
+    gap: 15px;
+  }
+
+  .menu {
+    gap: 14px;
+  }
+
+  .carte-boulangerie {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =====================================
+   TÉLÉPHONE
+===================================== */
+
+@media (max-width: 768px) {
+  .navigation {
+    min-height: 75px;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .menu.ouvert {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    display: block;
+    padding: 12px 5px;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 55px 6%;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 8vw, 44px);
+  }
+
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 10px;
+  }
+
+  .groupement {
+    grid-template-columns: 1fr;
+  }
+
+  .resultats-carte {
+    grid-template-columns: 1fr;
+  }
+
+  .panneau-carte {
+    grid-row: 1;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =====================================
+   PETITS TÉLÉPHONES
+===================================== */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommandations {
+    padding: 0 18px;
+  }
+
+  .carte-boulangerie {
+    flex-basis: 85%;
+  }
+
+  .carte-boulangerie img {
+    height: 180px;
+  }
+
+  .fleche-gauche {
+    left: -10px;
+  }
+
+  .fleche-droite {
+    right: -10px;
+  }
+
+  .resultat-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .resultat-boulangerie {
+    gap: 10px;
+  }
+
+  .resultat-contenu h4 {
+    font-size: 14px;
+  }
+
+  .resultat-avis {
+    gap: 5px;
+  }
+
+  .champ-recherche {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .champ-recherche button {
+    width: 100%;
+  }
+
+  .filtres {
+    gap: 8px;
+  }
+
+  .filtre {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+}
+
+/* =====================================
+   FINITIONS DES CARTES RECOMMANDÉES
+===================================== */
+
+.carte-boulangerie {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-width: 0;
+  height: auto;
+
+  background: white;
+  border: 1px solid #eee7dc;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 18px rgba(24, 15, 104, 0.08);
+  scroll-snap-align: start;
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.carte-boulangerie:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(24, 15, 104, 0.14);
+}
+
+/* Photographie */
+
+.carte-boulangerie > img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Zone contenant les textes */
+
+.carte-boulangerie .carte-contenu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 18px;
+  text-align: left;
+}
+
+/* Titre */
+
+.carte-boulangerie h3,
+.carte-boulangerie h4 {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+
+  color: var(--bleu);
+  margin: 0 0 10px;
+}
+
+/* Ville */
+
+.carte-boulangerie .ville {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* Avis toujours en bas */
+
+.carte-boulangerie .avis {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 12px;
+
+  font-size: 12px;
+  color: var(--bleu);
+}
+
+/* Étoiles */
+
+.carte-boulangerie .etoiles {
+  color: #e5a000;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+  .carte-boulangerie {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .carte-boulangerie {
+    flex-basis: 85%;
+  }
+
+  .carte-boulangerie > img {
+    height: 190px;
+  }
+
+  .carte-boulangerie .carte-contenu {
+    padding: 16px;
+  }
+
+  .carte-boulangerie h3,
+  .carte-boulangerie h4 {
+    font-size: 16px;
+  }
+}
