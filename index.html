@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - France Boulangerie</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="bandeau">
+        LE 1er GROUPEMENT DES ARTISANS BOULANGERS INDÉPENDANTS
+      </div>
+
+      <nav class="navigation" aria-label="Navigation principale">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/logo-france-boulangerie.webp"
+            alt="Logo France Boulangerie"
+          />
+          <span>FRANCE<br />BOULANGERIE</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          ☰
+        </button>
+
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="boulangeries.html">Trouver une boulangerie</a></li>
+          <li>
+            <a href="https://groupement.franceboulangerie.fr/"
+              >Je suis boulanger</a
+            >
+          </li>
+          <li>
+            <a href="https://www.franceboulangerie.fr/offres-demploi"
+              >Offres d'emploi</a
+            >
+          </li>
+          <li>
+            <a href="https://www.franceboulangerie.fr/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenu de la page d'accueil -->
+    <main>
+      <!-- Grande bannière d'accueil -->
+      <section class="hero">
+        <div class="hero-contenu">
+          <p class="hero-surtitre">
+            LE GROUPEMENT DES ARTISANS BOULANGERS INDÉPENDANTS
+          </p>
+
+          <h1>
+            Le réseau des
+            <span>artisans boulangers</span>
+            <span>indépendants</span>
+          </h1>
+
+          <p class="hero-description">
+            Trouvez une boulangerie proche de chez vous et découvrez le
+            savoir-faire de nos artisans.
+          </p>
+
+          <a href="boulangeries.html" class="bouton-rouge">
+            Voir les boulangeries sur la carte →
+          </a>
+        </div>
+      </section>
+
+      <!-- Catégories -->
+      <section class="categories" aria-label="Catégories de boulangeries">
+        <a href="boulangeries.html" class="categorie">
+          <span class="categorie-icone">🥖</span>
+          <span>Boulangerie</span>
+        </a>
+
+        <a href="boulangeries.html" class="categorie">
+          <span class="categorie-icone">🥪</span>
+          <span>Snacking</span>
+        </a>
+
+        <a href="boulangeries.html" class="categorie">
+          <span class="categorie-icone">🎂</span>
+          <span>Pâtisserie</span>
+        </a>
+
+        <a href="boulangeries.html" class="categorie">
+          <span class="categorie-icone">🌾</span>
+          <span>Farine française</span>
+        </a>
+
+        <a href="boulangeries.html" class="categorie">
+          <span class="categorie-icone">🥐</span>
+          <span>Viennoiserie</span>
+        </a>
+
+        <a href="boulangeries.html" class="categorie">
+          <span class="categorie-icone">🧁</span>
+          <span>Pâtisserie artisanale</span>
+        </a>
+      </section>
+
+      <!-- Boulangeries recommandées -->
+      <section class="recommandations">
+        <div class="titre-section">
+          <h2>Nos boulangeries recommandées</h2>
+          <span class="trait-dore"></span>
+        </div>
+
+        <div class="carrousel">
+          <button
+            class="fleche fleche-gauche"
+            type="button"
+            aria-label="Boulangeries précédentes"
+          >
+            &#10094;
+          </button>
+
+          <div class="liste-boulangeries" id="liste-boulangeries">
+            <article class="carte-boulangerie">
+              <img
+                src="assets/images/boulangeries/maison-saveurs.jpg"
+                alt="Boulangerie La Maison des Saveurs"
+              />
+
+              <div class="carte-contenu">
+                <h3>Boulangerie La Maison des Saveurs</h3>
+                <p class="ville">📍 Boulogne-Billancourt</p>
+                <div class="avis">
+                  <span class="etoiles">★★★★★</span>
+                  <span>31 avis</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carte-boulangerie">
+              <img
+                src="assets/images/boulangeries/fromentine.jpg"
+                alt="Boulangerie La Fromentine"
+              />
+
+              <div class="carte-contenu">
+                <h3>Boulangerie La Fromentine</h3>
+                <p class="ville">📍 Boulogne-Billancourt</p>
+                <div class="avis">
+                  <span class="etoiles">★★★★★</span>
+                  <span>30 avis</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carte-boulangerie">
+              <img
+                src="assets/images/boulangeries/fins-delices.jpg"
+                alt="Boulangerie Aux Fins Délices de Châtenay"
+              />
+
+              <div class="carte-contenu">
+                <h3>Boulangerie Aux Fins Délices de Châtenay</h3>
+                <p class="ville">📍 Châtenay-Malabry</p>
+                <div class="avis">
+                  <span class="etoiles">★★★★★</span>
+                  <span>26 avis</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button
+            class="fleche fleche-droite"
+            type="button"
+            aria-label="Boulangeries suivantes"
+          >
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <!-- Présentation du groupement -->
+      <section class="groupement">
+        <div class="groupement-image">
+          <img
+            src="assets/images/boulanger-superheros.jpg"
+            alt="Illustration d'un artisan boulanger en super-héros"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="groupement-contenu">
+          <p class="groupement-surtitre">FRANCE BOULANGERIE</p>
+
+          <h2>Un groupement au service des artisans boulangers</h2>
+
+          <p class="groupement-description">
+            France Boulangerie rassemble des boulangeries indépendantes partout
+            en France, engagées pour la qualité, le savoir-faire artisanal et la
+            proximité.
+          </p>
+
+          <p class="groupement-description">
+            Notre mission est d'accompagner les artisans boulangers et de
+            valoriser leur métier, tout en préservant leur indépendance.
+          </p>
+
+          <a
+            href="https://groupement.franceboulangerie.fr/"
+            class="bouton-contour"
+          >
+            En savoir plus →
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pied de page commun -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo-france-boulangerie.webp"
+            alt="France Boulangerie"
+          />
+          <strong>FRANCE BOULANGERIE</strong>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="boulangeries.html">Boulangeries sur la carte</a>
+        </div>
+
+        <a href="https://www.franceboulangerie.fr/contact"> Nous contacter </a>
+      </div>
+
+      <p class="copyright">
+        © France Boulangerie — Danish Anwar Chaudhry &amp; Thanina DJAMER
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Boulangeries sur la carte - France Boulangerie</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/main.js" defer></script>
+    <script src="js/boulangeries.js" defer></script>
+  </head>
+
+  <body>
+    <!-- =====================================
+         EN-TÊTE COMMUN
+    ===================================== -->
+
+    <header class="site-header">
+      <div class="bandeau">
+        LE 1er GROUPEMENT DES ARTISANS BOULANGERS INDÉPENDANTS
+      </div>
+
+      <nav class="navigation" aria-label="Navigation principale">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/logo-france-boulangerie.webp"
+            alt="Logo France Boulangerie"
+          />
+          <span>FRANCE<br />BOULANGERIE</span>
+        </a>
+
+        <!-- Menu mobile -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          ☰
+        </button>
+
+        <!-- Navigation -->
+        <ul class="menu" id="menu-principal">
+          <li>
+            <a href="index.html">Accueil</a>
+          </li>
+
+          <li>
+            <a href="boulangeries.html" class="active" aria-current="page">
+              Trouver une boulangerie
+            </a>
+          </li>
+
+          <li>
+            <a href="https://groupement.franceboulangerie.fr/">
+              Je suis boulanger
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.franceboulangerie.fr/offres-demploi">
+              Offres d'emploi
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.franceboulangerie.fr/contact"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- =====================================
+         CONTENU PRINCIPAL
+    ===================================== -->
+
+    <main>
+      <!-- BANNIÈRE -->
+
+      <section class="banniere-carte">
+        <div class="banniere-carte-contenu">
+          <p class="petit-titre">LE SAVOIR-FAIRE PRÈS DE CHEZ VOUS</p>
+
+          <h1>Boulangeries sur la carte</h1>
+
+          <p>
+            Découvrez les artisans boulangers indépendants près de chez vous.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================
+           RECHERCHE ET CARTE
+      ===================================== -->
+
+      <section class="recherche-boulangeries">
+        <!-- Titre de section -->
+
+        <div class="titre-section">
+          <h2>Trouvez votre boulangerie</h2>
+
+          <span class="trait-dore"></span>
+        </div>
+
+        <!-- BARRE DE RECHERCHE -->
+
+        <div class="barre-recherche">
+          <label for="recherche"> Rechercher une boulangerie </label>
+
+          <div class="champ-recherche">
+            <input
+              type="search"
+              id="recherche"
+              placeholder="Ville, code postal, boulangerie..."
+            />
+
+            <button type="button" id="bouton-recherche">Rechercher</button>
+          </div>
+        </div>
+
+        <!-- FILTRES -->
+
+        <div class="filtres" aria-label="Filtres des boulangeries">
+          <button type="button" class="filtre actif" data-filtre="tous">
+            Toutes
+          </button>
+
+          <button type="button" class="filtre" data-filtre="boulangerie">
+            Boulangerie
+          </button>
+
+          <button type="button" class="filtre" data-filtre="patisserie">
+            Pâtisserie
+          </button>
+
+          <button type="button" class="filtre" data-filtre="snacking">
+            Snacking
+          </button>
+        </div>
+
+        <!-- =====================================
+             LISTE DES RÉSULTATS + CARTE
+        ===================================== -->
+
+        <div class="resultats-carte">
+          <!-- PANNEAU DES BOULANGERIES -->
+
+          <div class="panneau-resultats">
+            <h3>Nos boulangeries</h3>
+
+            <p id="nombre-resultats" aria-live="polite">
+              Les résultats apparaîtront ici.
+            </p>
+
+            <div id="liste-resultats">
+              <!-- Les fiches sont créées en JavaScript -->
+            </div>
+          </div>
+
+          <!-- PANNEAU DE LA CARTE -->
+
+          <div class="panneau-carte">
+            <h3>Localisation</h3>
+
+            <!-- CARTE INTERACTIVE -->
+
+            <div id="carte" aria-label="Carte interactive des boulangeries">
+              <!-- Tuiles OpenStreetMap -->
+              <div id="tuiles-carte"></div>
+
+              <!-- Marqueurs des boulangeries -->
+              <div id="marqueurs-carte"></div>
+
+              <!-- Boutons de zoom -->
+              <div class="controles-carte">
+                <button type="button" id="zoom-plus" aria-label="Zoomer">
+                  +
+                </button>
+
+                <button type="button" id="zoom-moins" aria-label="Dézoomer">
+                  −
+                </button>
+              </div>
+
+              <!-- Attribution obligatoire -->
+              <div class="attribution-carte">
+                ©
+                <a
+                  href="https://www.openstreetmap.org/copyright"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  OpenStreetMap
+                </a>
+                contributors
+              </div>
+            </div>
+            <!-- FIN DE LA CARTE -->
+          </div>
+          <!-- FIN DU PANNEAU CARTE -->
+        </div>
+        <!-- FIN DE LISTE + CARTE -->
+      </section>
+      <!-- FIN DE LA SECTION RECHERCHE -->
+    </main>
+
+    <!-- =====================================
+         PIED DE PAGE COMMUN
+    ===================================== -->
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <!-- Logo -->
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo-france-boulangerie.webp"
+            alt="France Boulangerie"
+          />
+
+          <strong>FRANCE BOULANGERIE</strong>
+        </div>
+
+        <!-- Liens internes -->
+        <div class="footer-links">
+          <a href="index.html"> Accueil </a>
+
+          <a href="boulangeries.html"> Boulangeries sur la carte </a>
+        </div>
+
+        <!-- Contact -->
+        <a href="https://www.franceboulangerie.fr/contact"> Nous contacter </a>
+      </div>
+
+      <p class="copyright">
+        © France Boulangerie — Danish Anwar Chaudhry &amp; Thanina DJAMER
+      </p>
+    </footer>
+  </body>
+</html>
