@@ -1,95 +1,70 @@
-Projet France Boulangerie
+# 🥖 France Boulangerie
 
-Présentation du projet : Ce projet a été réalisé en binôme par Danish Anwar Chaudhry et Thanina DJAMER dans le cadre d'un travail scolaire.
+## Présentation
 
-L'objectif était de réaliser une refonte du site France Boulangerie en utilisant les technologies HTML, CSS et JavaScript, sans framework ni bibliothèque externe.
+France Boulangerie est un projet de refonte d'un site web réalisé dans le cadre de notre formation à l'ESGI.
 
-Site original : https://www.franceboulangerie.fr/
+L'objectif est de proposer un site simple et agréable à utiliser pour découvrir des boulangeries et consulter leurs informations.
 
-Membres du groupe : Danish Anwar Chaudhry et Thanina DJAMER
+Ce projet a été réalisé en binôme avec **Danish Anwar Chaudhry**.
 
-Technologies utilisées :
+## Fonctionnalités
 
-HTML5 : structure et contenu des pages.
+- Page d'accueil présentant le site.
+- Consultation des boulangeries.
+- Recherche et filtrage des boulangeries.
+- Affichage des boulangeries sur une carte.
+- Navigation entre les différentes pages.
 
-CSS3 : mise en page, couleurs, animations et adaptation aux différents écrans.
+*Les informations sur les boulangeries sont des données de démonstration.*
 
-JavaScript : interactions, carrousel, recherche, filtres et carte interactive.
+## Technologies utilisées
 
-OpenStreetMap : affichage du fond de carte.
+- **HTML5** : structure des pages.
+- **CSS3** : mise en forme et design.
+- **JavaScript** : interactions et fonctionnalités.
+- **OpenStreetMap** : affichage de la carte.
 
-Le projet a été développé sans Bootstrap, Leaflet ou autre framework.
+## Captures d'écran
 
-Structure du projet :
+### Page d'accueil
 
-France-Boulangerie/
+<!-- Ajouter ici une capture de la page d'accueil -->
+
+### Page des boulangeries
+
+<!-- Ajouter ici une capture de la page des boulangeries -->
+
+## Organisation du projet
+
+```text
+france-boulangerie/
+│
+├── assets/
+│   └── images/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── main.js
+│   └── boulangeries.js
+│
 ├── index.html
 ├── boulangeries.html
-├── README.md
-├── css/
-│ └── style.css
-├── js/
-│ ├── main.js
-│ └── boulangeries.js
-└── assets/
-└── images/
-├── logo-france-boulangerie.webp
-└── boulangeries/
+└── README.md
+```
 
-Le dossier assets/images/ contient également les autres photographies utilisées sur le site.
+## Répartition du travail
 
-Description des fichiers
+- **Thanina DJAMER** : réalisation de la page d'accueil.
+- **Danish Anwar Chaudhry** : réalisation de la page des boulangeries.
+- **Travail en commun** : CSS et JavaScript.
 
-Thanina DJAMER : index.html : page d'accueil avec la présentation de France Boulangerie, les catégories et les boulangeries recommandées.
+## Voir le projet
 
-Danish Anwar Chaudhry : boulangeries.html : page permettant de rechercher des boulangeries et de les visualiser sur une carte.
+🌐 [Consulter le site](https://djamerthanina-arch.github.io/france-boulangerie/)
 
-css/style.css : feuille de style commune aux deux pages.
+## Remarque
 
-js/main.js : gestion du menu mobile et du carrousel de la page d'accueil.
-
-js/boulangeries.js : gestion des données des boulangeries, de la recherche, des filtres et de la carte interactive.
-
-assets/images/ : images et logo utilisés dans le projet.
-
-Fonctionnalités
-
-Navigation entre les deux pages.
-
-Design responsive pour ordinateur, tablette et téléphone.
-
-Menu de navigation adapté aux petits écrans.
-
-Carrousel de boulangeries recommandées.
-
-Recherche par nom, ville ou code postal.
-
-Filtres par catégorie.
-
-Affichage des boulangeries sur une carte interactive.
-
-Déplacement de la carte et boutons de zoom.
-
-Liens vers les pages externes du site France Boulangerie.
-
-Lancement du site
-
-Télécharger ou extraire le dossier du projet.
-
-Ouvrir le dossier France-Boulangerie.
-
-Ouvrir le fichier index.html dans un navigateur.
-
-Utiliser le menu pour accéder à la page des boulangeries.
-
-Remarques :
-
-Le site est une réalisation pédagogique et n'est pas le site officiel de France Boulangerie.
-
-Les boulangeries présentées, leurs avis et leurs coordonnées sont des données de démonstration. Elles ne constituent pas un annuaire officiel vérifié.
-
-Crédits
-
-Projet réalisé par Danish Anwar Chaudhry et Thanina DJAMER.
-
-© France Boulangerie — Danish Anwar Chaudhry & Thanina DJAMER
+Ce projet est un travail pédagogique. Il ne s'agit pas du site officiel France Boulangerie.
